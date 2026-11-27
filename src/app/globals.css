@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply min-h-screen bg-loto-bg text-slate-100 antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(34, 211, 238, 0.18), transparent),
+    radial-gradient(ellipse 50% 40% at 100% 50%, rgba(232, 121, 249, 0.12), transparent);
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-2xl border border-white/10 bg-loto-panel shadow-glass backdrop-blur-xl;
+  }
+  .btn-primary {
+    @apply rounded-xl bg-gradient-to-r from-loto-cyan to-loto-magenta px-5 py-2.5 font-medium text-slate-950 shadow-neon transition hover:opacity-95 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm transition hover:bg-white/10;
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-white/15 bg-black/30 px-4 py-2.5 text-sm outline-none ring-loto-cyan/40 focus:ring-2;
+  }
+}
