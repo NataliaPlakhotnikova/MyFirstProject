@@ -49,7 +49,8 @@ export async function GET(
     .eq("session_id", session.id)
     .maybeSingle();
 
-  const { host_token: _ht, ...publicSession } = session;
+  const publicSession = { ...session };
+  delete (publicSession as { host_token?: string }).host_token;
   return NextResponse.json({
     session: publicSession,
     player,

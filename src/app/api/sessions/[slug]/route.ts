@@ -19,6 +19,7 @@ export async function GET(
     .eq("session_id", session.id)
     .order("sequence", { ascending: true });
 
-  const { host_token: _hidden, ...publicSession } = session;
+  const publicSession = { ...session };
+  delete (publicSession as { host_token?: string }).host_token;
   return NextResponse.json({ session: publicSession, draws: draws ?? [] });
 }

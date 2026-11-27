@@ -8,7 +8,7 @@ export function DrawTicker({ draws }: { draws: Draw[] }) {
 
   return (
     <div className="glass-panel flex flex-col gap-3 p-4 sm:flex-row sm:items-center">
-      <motionBarrel latest={latest?.barrel} />
+      <MotionBarrel latest={latest?.barrel} />
       <div className="flex-1">
         <p className="text-xs uppercase tracking-wide text-slate-400">Выпавшие бочонки</p>
         <div className="mt-2 flex max-h-24 flex-wrap gap-1.5 overflow-y-auto">
@@ -29,7 +29,7 @@ export function DrawTicker({ draws }: { draws: Draw[] }) {
   );
 }
 
-function motionBarrel({ latest }: { latest?: number }) {
+function MotionBarrel({ latest }: { latest?: number }) {
   return (
     <div className="flex items-center gap-3">
       <Image

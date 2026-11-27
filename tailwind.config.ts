@@ -24,7 +24,7 @@ const config: Config = {
       },
       animation: {
         "barrel-in": "barrel-in 0.45s ease-out",
-        pulse-soft: "pulse-soft 2s ease-in-out infinite",
+        "pulse-soft": "pulse-soft 2s ease-in-out infinite",
       },
       keyframes: {
         "barrel-in": {

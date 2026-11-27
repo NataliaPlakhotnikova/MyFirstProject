@@ -82,7 +82,7 @@ export function validateClaim(
     return { ok: false, reason: "Карточка не заполнена полностью" };
   }
 
-  for (const [key, _] of marks) {
+  for (const key of marks.keys()) {
     const [rowS, colS] = key.split(":");
     const row = Number(rowS);
     const col = Number(colS);
